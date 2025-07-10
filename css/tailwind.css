@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-lg font-nunito font-cta border-2 border-transparent hover:border-primary shadow-lg hover:shadow-xl transition-all duration-200 ease-in-out;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white px-6 py-3 rounded-lg font-nunito font-cta shadow-md hover:shadow-lg transition-all duration-200 ease-in-out;
+}
+
+.card {
+  @apply bg-surface p-6 rounded-lg border border-border shadow-md;
+}
+
+.testimonial-card {
+  @apply bg-surface p-6 rounded-lg border border-border shadow-testimonial transform transition-all duration-300 ease-in-out;
+}
+
+.hero-cta {
+  @apply bg-primary text-white px-8 py-4 rounded-lg font-nunito font-cta border-2 border-transparent hover:border-primary shadow-hero hover:shadow-xl transition-all duration-200 ease-in-out;
+}
+
+.form-field {
+  @apply bg-surface px-4 py-2 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 ease-in-out;
+}
+
+.shadow-hero {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.slide-up {
+  animation: slideUp 300ms ease-in-out;
+}
+
+:root {
+  /* Primary Colors */
+  --color-primary: #FCC019; /* yellow-400 */
+  --color-secondary: #0A4685; /* blue-800 */
+  
+  /* Accent Colors */
+  --color-accent: #EDF5FC; /* blue-50 */
+  --color-background: #FFFFFF; /* white */
+  --color-surface: #F8FAFC; /* slate-50 */
+  
+  /* Text Colors */
+  --color-text-primary: #1F2937; /* gray-800 */
+  --color-text-secondary: #6B7280; /* gray-500 */
+  
+  /* Status Colors */
+  --color-success: #10B981; /* emerald-500 */
+  --color-warning: #F59E0B; /* amber-500 */
+  --color-error: #EF4444; /* red-500 */
+  
+  /* Border Colors */
+  --color-border: #E5E7EB; /* gray-200 */
+  --color-border-primary: #FCC019; /* yellow-400 */
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Msefer - Envoyez vos colis via des voyageurs de confiance</title>
+    <meta name="description" content="Service de livraison peer-to-peer connectant voyageurs et expéditeurs pour transport sécurisé de colis transfrontaliers - médicaments, documents, objets personnels." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+        /* Custom styles to fix checkmark icons */
+        .checkmark-fix {
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        
+        /* Style for success checkmarks */
+        svg.icon-checkmark {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+            fill: none;
+        }
+        
+        /* Enhanced styles for feature checkmarks */
+        .feature-check {
+            display: flex;
+            align-items: center;
+        }
+        
+        .feature-check svg {
+            min-width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <nav class="fixed top-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="../assets/images/msefer_logo-1752079995186.png" alt="Msefer Logo" class="h-10 w-auto" />
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#comment-ca-marche" class="text-text-secondary hover:text-secondary transition-colors">Comment ça marche</a>
+                    <a href="#temoignages" class="text-text-secondary hover:text-secondary transition-colors">Témoignages</a>
+                    <a href="#tarifs" class="text-text-secondary hover:text-secondary transition-colors">Tarifs</a>
+                    <a href="#faq" class="text-text-secondary hover:text-secondary transition-colors">FAQ</a>
+                    <button class="btn-primary text-sm">Télécharger l'app</button>
+                </div>
+                <button class="md:hidden p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Voyageurs transportant des colis" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+            <div class="absolute inset-0 bg-secondary/70"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-nunito font-headline-bold text-white mb-6 leading-tight">
+                    Envoyez vos colis via des voyageurs de confiance
+                </h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
+                    Livraison rapide et sécurisée par des voyageurs vérifiés - parfait pour médicaments urgents
+                </p>
+                
+                <!-- Trust Indicators -->
+                <div class="flex flex-wrap justify-center items-center gap-6 mb-10 text-white/80">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-primary icon-checkmark checkmark-fix" viewBox="0 0 24 24">
+                            <path d="M5 13l4 4L19 7"/>
+                        </svg>
+                        <span class="font-accent-bold">2,847 livraisons réussies</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex text-primary">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span class="ml-1">4.8/5</span>
+                        </div>
+                        <span class="font-accent-bold">étoiles de confiance</span>
+                    </div>
+                </div>
+
+                <!-- App Download CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://apps.apple.com" class="hero-cta flex items-center gap-3 min-w-[200px]">
+                        <img src="https://developer.apple.com/assets/elements/icons/app-store/app-store-64x64_2x.png" alt="App Store" class="w-8 h-8" onerror="this.src='https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="text-left">
+                            <div class="text-sm opacity-90">Télécharger sur</div>
+                            <div class="font-cta">App Store</div>
+                        </div>
+                    </a>
+                    <a href="https://play.google.com" class="hero-cta flex items-center gap-3 min-w-[200px]">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/512px-Google_Play_Arrow_logo.svg.png" alt="Google Play" class="w-8 h-8" onerror="this.src='https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="text-left">
+                            <div class="text-sm opacity-90">Disponible sur</div>
+                            <div class="font-cta">Google Play</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-nunito font-headline text-secondary mb-6">
+                    L'expédition traditionnelle vous coûte cher
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Les services postaux classiques sont lents, coûteux et peu fiables pour vos envois urgents
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="bg-error/10 border border-error/20 rounded-lg p-6">
+                        <h3 class="text-2xl font-nunito font-headline text-error mb-4">Expédition traditionnelle</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span>Coût moyen</span>
+                                <span class="font-accent-bold text-error">€45-80</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Délai de livraison</span>
+                                <span class="font-accent-bold text-error">2-3 semaines</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Fiabilité</span>
+                                <span class="font-accent-bold text-error">Incertaine</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Suivi</span>
+                                <span class="font-accent-bold text-error">Limité</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-success/10 border border-success/20 rounded-lg p-6">
+                        <h3 class="text-2xl font-nunito font-headline text-success mb-4">Avec Msefer</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span>Coût moyen</span>
+                                <span class="font-accent-bold text-success">€15-25</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Délai de livraison</span>
+                                <span class="font-accent-bold text-success">3-5 jours</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Fiabilité</span>
+                                <span class="font-accent-bold text-success">Garantie</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span>Suivi</span>
+                                <span class="font-accent-bold text-success">Temps réel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Médicaments urgents" class="w-full h-96 object-cover rounded-lg shadow-lg" onerror="this.src='https://images.pexels.com/photos/3683074/pexels-photo-3683074.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary/50 to-transparent rounded-lg"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <p class="text-lg font-accent-bold">Médicaments urgents ?</p>
+                        <p class="text-sm opacity-90">Ne laissez pas votre famille attendre</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-nunito font-headline text-secondary mb-6">
+                    Réseau de voyageurs vérifiés
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Des milliers de voyageurs de confiance transportent vos colis entre la France et l'Afrique du Nord
+                </p>
+            </div>
+
+            <div class="relative bg-accent rounded-2xl p-8 overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 bg-background rounded-lg p-4 shadow-md">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-accent-bold text-secondary">Paris → Tunis</p>
+                                <p class="text-sm text-text-secondary">3 voyageurs disponibles aujourd'hui</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-background rounded-lg p-4 shadow-md">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-accent-bold text-secondary">Lyon → Casablanca</p>
+                                <p class="text-sm text-text-secondary">2 voyageurs disponibles demain</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-background rounded-lg p-4 shadow-md">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-accent-bold text-secondary">Marseille → Alger</p>
+                                <p class="text-sm text-text-secondary">5 voyageurs disponibles cette semaine</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Carte des trajets" class="w-full h-80 object-cover rounded-lg shadow-lg" onerror="this.src='https://images.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comment ça marche Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-nunito font-headline text-secondary mb-6">
+                    Comment ça marche
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Trois étapes simples pour envoyer vos colis en toute sécurité
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center group">
+                    <div class="relative mb-8">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-2xl font-nunito font-headline-bold text-white">1</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-nunito font-headline text-secondary mb-4">Publiez votre demande</h3>
+                    <p class="text-text-secondary mb-6">Décrivez votre colis, destination et délai souhaité. Notre système trouve automatiquement les voyageurs compatibles.</p>
+                    <div class="bg-background rounded-lg p-4 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Interface de publication" class="w-full h-32 object-cover rounded-md" onerror="this.src='https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center group">
+                    <div class="relative mb-8">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-2xl font-nunito font-headline-bold text-white">2</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-nunito font-headline text-secondary mb-4">Choisissez un voyageur vérifié</h3>
+                    <p class="text-text-secondary mb-6">Consultez les profils, évaluations et trajets. Communiquez directement avant de confirmer votre choix.</p>
+                    <div class="bg-background rounded-lg p-4 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Profil voyageur" class="w-full h-32 object-cover rounded-md" onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center group">
+                    <div class="relative mb-8">
+                        <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <span class="text-2xl font-nunito font-headline-bold text-white">3</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-nunito font-headline text-secondary mb-4">Recevez confirmation de livraison</h3>
+                    <p class="text-text-secondary mb-6">Suivez votre colis en temps réel et recevez une photo de confirmation à la livraison.</p>
+                    <div class="bg-background rounded-lg p-4 shadow-md">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Confirmation de livraison" class="w-full h-32 object-cover rounded-md" onerror="this.src='https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile App Showcase -->
+    <section class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-5xl font-nunito font-headline text-secondary mb-6">
+                        L'application qui simplifie tout
+                    </h2>
+                    <p class="text-xl text-text-secondary mb-8">
+                        Interface intuitive, suivi en temps réel, paiements sécurisés et communication directe avec les voyageurs.
+                    </p>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white icon-checkmark checkmark-fix" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-nunito font-headline text-secondary mb-2">Suivi en temps réel</h3>
+                                <p class="text-text-secondary">Localisez votre colis à chaque étape du voyage</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-nunito font-headline text-secondary mb-2">Messagerie intégrée</h3>
+                                <p class="text-text-secondary">Communiquez directement avec votre voyageur</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-nunito font-headline text-secondary mb-2">Paiements sécurisés</h3>
+                                <p class="text-text-secondary">Transactions protégées avec garantie remboursement</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://apps.apple.com" class="btn-primary flex items-center justify-center gap-3">
+                            <img src="https://developer.apple.com/assets/elements/icons/app-store/app-store-64x64_2x.png" alt="App Store" class="w-6 h-6" onerror="this.src='https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                            Télécharger sur App Store
+                        </a>
+                        <a href="https://play.google.com" class="btn-secondary flex items-center justify-center gap-3">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/512px-Google_Play_Arrow_logo.svg.png" alt="Google Play" class="w-6 h-6" onerror="this.src='https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                            Télécharger sur Google Play
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="relative z-10">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Interface application mobile" class="w-full max-w-md mx-auto rounded-3xl shadow-2xl" onerror="this.src='https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/20 rounded-full blur-xl"></div>
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-secondary/20 rounded-full blur-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="temoignages" class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-nunito font-headline text-secondary mb-6">
+                    Ils nous font confiance
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Découvrez les témoignages de nos utilisateurs satisfaits
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Customer Testimonial 1 -->
+                <div class="testimonial-card hover:shadow-lg">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-6461ffad8d80?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Fatima" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-nunito font-headline text-secondary">Fatima M.</h4>
+                            <p class="text-sm text-text-secondary">Paris → Tunis</p>
+                        </div>
+                    </div>
+                    <div class="flex text-primary mb-3">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary">
+                        "J'ai pu envoyer les médicaments de ma mère en urgence. Le voyageur était très professionnel et ma famille a reçu le colis en 4 jours seulement. Économie de 60€ par rapport à DHL !"
+                    </p>
+                </div>
+
+                <!-- Traveler Testimonial 1 -->
+                <div class="testimonial-card hover:shadow-lg">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Ahmed" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-nunito font-headline text-secondary">Ahmed K.</h4>
+                            <p class="text-sm text-text-secondary">Voyageur vérifié</p>
+                        </div>
+                    </div>
+                    <div class="flex text-primary mb-3">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary">
+                        "En tant que voyageur fréquent, Msefer me permet de gagner 200-300€ par mois en aidant les autres. Le processus est simple et sécurisé. Je recommande !"
+                    </p>
+                </div>
+
+                <!-- Customer Testimonial 2 -->
+                <div class="testimonial-card hover:shadow-lg">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Leila" class="w-12 h-12 rounded-full object-cover" onerror="this.src='https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-nunito font-headline text-secondary">Leila B.</h4>
+                            <p class="text-sm text-text-secondary">Lyon → Casablanca</p>
+                        </div>
+                    </div>
+                    <div class="flex text-primary mb-3">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                    <p class="text-text-secondary">
+                        "Service exceptionnel ! J'ai envoyé des documents importants à ma famille. Le suivi était parfait et la livraison plus rapide que prévu. Je recommande vivement."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Success Metrics -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-nunito font-headline-bold text-primary mb-2">15,000+</div>
+                    <div class="text-text-secondary">Utilisateurs actifs</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-nunito font-headline-bold text-primary mb-2">2,847</div>
+                    <div class="text-text-secondary">Livraisons réussies</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-nunito font-headline-bold text-primary mb-2">4.8/5</div>
+                    <div class="text-text-secondary">Note moyenne</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-nunito font-headline-bold text-primary mb-2">3.5j</div>
+                    <div class="text-text-secondary">Délai moyen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="tarifs" class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-nunito font-headline text-secondary mb-6">
+                    Tarifs transparents
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Économisez jusqu'à 70% par rapport aux services traditionnels
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Traditional Shipping -->
+                <div class="card border-error/20">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-nunito font-headline text-error mb-2">Services traditionnels</h3>
+                        <div class="text-4xl font-nunito font-headline-bold text-error mb-1">€45-80</div>
+                        <div class="text-text-secondary">par envoi</div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                            </svg>
+                            <span>Délai 2-3 semaines</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                            </svg>
+                            <span>Suivi limité</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                            </svg>
+                            <span>Risque de perte</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"/>
+                            </svg>
+                            <span>Frais cachés</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Msefer Pricing -->
+                <div class="card border-primary/50 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 bg-primary text-white text-center py-2 text-sm font-cta">
+                        RECOMMANDÉ
+                    </div>
+                    <div class="text-center mb-6 pt-8">
+                        <h3 class="text-2xl font-nunito font-headline text-primary mb-2">Msefer</h3>
+                        <div class="text-4xl font-nunito font-headline-bold text-primary mb-1">€15-25</div>
+                        <div class="text-text-secondary">par envoi</div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 feature-check">
+                            <svg class="w-5 h-5 text-success icon-checkmark checkmark-fix" viewBox="0 0 24 24">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Délai 3-5 jours</span>
+                        </li>
+                        <li class="flex items-center gap-3 feature-check">
+                            <svg class="w-5 h-5 text-success icon-checkmark checkmark-fix" viewBox="0 0 24 24">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Suivi temps réel</span>
+                        </li>
+                        <li class="flex items-center gap-3 feature-check">
+                            <svg class="w-5 h-5 text-success icon-checkmark checkmark-fix" viewBox="0 0 24 24">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Assurance incluse</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span>Prix transparent</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <button class="btn-primary w-full">Commencer maintenant</button>
+                    </div>
+                </div>
+
+                <!-- Premium Features -->
+                <div class="card border-secondary/20">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-nunito font-headline text-secondary mb-2">Fonctionnalités</h3>
+                        <div class="text-lg text-text-secondary">Incluses gratuitement</div>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 feature-check">
+                            <svg class="w-5 h-5 text-success icon-checkmark checkmark-fix" viewBox="0 0 24 24">
+                                <path d="M5 13l4 4L19 7"/>
+                            </svg>
+                            <span>Vérification voyageurs</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span>Messagerie sécurisée</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span>Support 24/7</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <span>Garantie remboursement</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cost Calculator -->
+            <div class="bg-accent rounded-2xl p-8">
+                <h3 class="text-2xl font-nunito font-headline text-secondary text-center mb-8">
+                    Calculez vos économies
+                </h3>
+                <div class="max-w-2xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-sm font-accent-bold text-text-primary mb-2">Poids du colis (kg)</label>
+                            <input type="number" class="form-field w-full" placeholder="2" value="2" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-accent-bold text-text-primary mb-2">Destination</label>
+                            <select class="form-field w-full">
+                                <option>Tunis, Tunisie</option>
+                                <option>Casablanca, Maroc</option>
+                                <option>Alger, Algérie</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="bg-background rounded-lg p-6 text-center">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <div class="text-2xl font-nunito font-headline-bold text-error mb-2">€65</div>
+                                <div class="text-sm text-text-secondary">Service traditionnel</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-nunito font-headline-bold text-success mb-2">€20</div>
+                                <div class="text-sm text-text-secondary">Avec Msefer</div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-border">
+                            <div class="text-lg font-nunito font-headline text-primary">
+                                Économie : €45 (69%)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-nunito font-headline text-secondary mb-6">
+                    Questions fréquentes
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Tout ce que vous devez savoir sur Msefer
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="card">
+                    <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(1)">
+                        <h3 class="text-lg font-nunito font-headline text-secondary">
+                            Comment garantissez-vous la sécurité des colis ?
+                        </h3>
+                        <svg id="faq-icon-1" class="w-5 h-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="faq-content-1" class="hidden mt-4 text-text-secondary">
+                        <p>Tous nos voyageurs sont vérifiés avec contrôle d'identité, vérification des antécédents et système de notation. Chaque envoi est assuré jusqu'à 500€ et nous offrons un suivi en temps réel avec photos de confirmation.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="card">
+                    <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(2)">
+                        <h3 class="text-lg font-nunito font-headline text-secondary">
+                            Quels types de colis puis-je envoyer ?
+                        </h3>
+                        <svg id="faq-icon-2" class="w-5 h-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="faq-content-2" class="hidden mt-4 text-text-secondary">
+                        <p>Vous pouvez envoyer des médicaments (avec ordonnance), documents officiels, vêtements, produits alimentaires non périssables et objets personnels. Les articles interdits incluent les liquides, produits dangereux et objets de valeur supérieure à 500€.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="card">
+                    <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(3)">
+                        <h3 class="text-lg font-nunito font-headline text-secondary">
+                            Comment fonctionne le paiement ?
+                        </h3>
+                        <svg id="faq-icon-3" class="w-5 h-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="faq-content-3" class="hidden mt-4 text-text-secondary">
+                        <p>Le paiement est sécurisé via notre plateforme. Vous payez lors de la confirmation, l'argent est bloqué en séquestre et libéré au voyageur uniquement après confirmation de livraison. Remboursement intégral en cas de problème.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="card">
+                    <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(4)">
+                        <h3 class="text-lg font-nunito font-headline text-secondary">
+                            Que se passe-t-il si mon colis est perdu ?
+                        </h3>
+                        <svg id="faq-icon-4" class="w-5 h-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="faq-content-4" class="hidden mt-4 text-text-secondary">
+                        <p>Chaque envoi est couvert par notre assurance jusqu'à 500€. En cas de perte ou dommage, nous remboursons intégralement la valeur déclarée sous 48h après investigation. Notre taux de livraison réussie est de 99.2%.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="card">
+                    <button class="w-full text-left flex justify-between items-center" onclick="toggleFAQ(5)">
+                        <h3 class="text-lg font-nunito font-headline text-secondary">
+                            Comment devenir voyageur sur Msefer ?
+                        </h3>
+                        <svg id="faq-icon-5" class="w-5 h-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div id="faq-content-5" class="hidden mt-4 text-text-secondary">
+                        <p>Téléchargez l'app, créez votre profil voyageur, soumettez vos documents d'identité pour vérification. Une fois approuvé (24-48h), publiez vos trajets et commencez à gagner de l'argent en aidant la communauté.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary to-secondary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-nunito font-headline-bold text-white mb-6">
+                Rejoignez 15,000+ utilisateurs satisfaits
+            </h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Téléchargez Msefer maintenant et découvrez la façon la plus rapide, sûre et économique d'envoyer vos colis
+            </p>
+
+            <!-- App Download Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <a href="https://apps.apple.com" class="bg-white text-secondary font-nunito font-cta px-8 py-4 rounded-lg shadow-hero hover:shadow-xl transition-all duration-200 ease-in-out flex items-center gap-3 min-w-[220px]">
+                    <img src="https://developer.apple.com/assets/elements/icons/app-store/app-store-64x64_2x.png" alt="App Store" class="w-8 h-8" onerror="this.src='https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                    <div class="text-left">
+                        <div class="text-sm opacity-70">Télécharger sur</div>
+                        <div class="font-cta">App Store</div>
+                    </div>
+                </a>
+                <a href="https://play.google.com" class="bg-white text-secondary font-nunito font-cta px-8 py-4 rounded-lg shadow-hero hover:shadow-xl transition-all duration-200 ease-in-out flex items-center gap-3 min-w-[220px]">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Google_Play_Arrow_logo.svg/512px-Google_Play_Arrow_logo.svg.png" alt="Google Play" class="w-8 h-8" onerror="this.src='https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                    <div class="text-left">
+                        <div class="text-sm opacity-70">Disponible sur</div>
+                        <div class="font-cta">Google Play</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Email Signup -->
+            <div class="max-w-md mx-auto">
+                <p class="text-white/80 mb-4">Ou recevez les notifications de nouvelles routes :</p>
+                <form class="flex gap-2">
+                    <input type="email" placeholder="votre@email.com" class="flex-1 px-4 py-3 rounded-lg border-0 focus:outline-none focus:ring-2 focus:ring-white/50" />
+                    <button type="submit" class="bg-white text-secondary px-6 py-3 rounded-lg font-cta hover:bg-white/90 transition-colors">
+                        S'inscrire
+                    </button>
+                </form>
+                <p class="text-xs text-white/60 mt-2">Vos données sont protégées. Pas de spam.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/images/msefer_logo-1752079995186.png" alt="Msefer Logo" class="h-8 w-auto filter brightness-0 invert" />
+                    </div>
+                    <p class="text-white/80 mb-4">
+                        La plateforme de confiance pour vos envois transfrontaliers via des voyageurs vérifiés.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com" class="text-white/60 hover:text-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c-3.259 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                        </a>
+                        <a href="https://whatsapp.com" class="text-white/60 hover:text-primary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-nunito font-headline text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Envoi de colis</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Devenir voyageur</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Suivi en temps réel</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Assurance colis</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-nunito font-headline text-lg mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#faq" class="text-white/80 hover:text-primary transition-colors">FAQ</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Centre d'aide</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Nous contacter</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Signaler un problème</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-nunito font-headline text-lg mb-4">Légal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Conditions d'utilisation</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Politique de confidentialité</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Mentions légales</a></li>
+                        <li><a href="javascript:void(0)" class="text-white/80 hover:text-primary transition-colors">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 mt-8 pt-8 text-center">
+                <p class="text-white/60">
+                    © 2025 Msefer. Tous droits réservés. | Service de livraison peer-to-peer sécurisé
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // FAQ Toggle Function
+        function toggleFAQ(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                content.classList.add('slide-up');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                content.classList.remove('slide-up');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.md\\:hidden button');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                // Add mobile menu functionality here
+                console.log('Mobile menu clicked');
+            });
+        }
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            if (email) {
+                alert('Merci ! Vous recevrez nos notifications de nouvelles routes.');
+                this.reset();
+            }
+        });
+
+        // Animated counters for statistics
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString() + (target >= 1000 ? '+' : '');
+            }, 20);
+        }
+
+        // Intersection Observer for counter animation
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.text-4xl');
+                    counters.forEach(counter => {
+                        const text = counter.textContent;
+                        const number = parseInt(text.replace(/[^\d]/g, ''));
+                        if (number) {
+                            animateCounter(counter, number);
+                        }
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe the statistics section
+        const statsSection = document.querySelector('#temoignages .grid.grid-cols-2');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+        
+        // Fix all checkmark icons on the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find all SVG checkmarks that have not been fixed yet
+            const checkmarkPaths = [
+                'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z',
+                'M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
+            ];
+            
+            document.querySelectorAll('svg').forEach(svg => {
+                const path = svg.querySelector('path');
+                if (path && checkmarkPaths.some(p => path.getAttribute('d')?.includes(p))) {
+                    // This is a checkmark that needs fixing
+                    svg.classList.add('icon-checkmark', 'checkmark-fix');
+                    svg.setAttribute('viewBox', '0 0 24 24');
+                    svg.setAttribute('fill', 'none');
+                    
+                    // Replace the path
+                    path.setAttribute('d', 'M5 13l4 4L19 7');
+                    if (svg.parentElement && !svg.parentElement.classList.contains('feature-check')) {
+                        svg.parentElement.classList.add('feature-check');
+                    }
+                }
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
